@@ -6,14 +6,13 @@
 </head>
 <body>
     <h1>Predict Housing Price</h1>
-    {% create the form, it should handle a POST request %}
     <form method="post">
         <label for="num_rooms">Number of Rooms:</label>
         <input type="number" id="num_rooms" name="num_rooms" step="0.1" required>
         <button type="submit">Predict Price</button>
     </form>
     
-    {% if prediction, round it to 2 decimal points and display %}
+    {% if prediction is not none %}
         <h2>Predicted Price: ${{ prediction|round(2) }}k</h2>
     {% endif %}
 </body>
